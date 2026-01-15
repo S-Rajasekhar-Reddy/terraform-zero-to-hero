@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "abhishek-s3-demo-xyz" # change this
-    key            = "abhi/terraform.tfstate"
-    region         = "us-east-1"
-    encrypt        = true
+    bucket = "sai-tf-remote-backend-bucket"
+    key = "tf-state/terraform.tfstate"
+    region = "us-east-2"
+    encrypt = true
     dynamodb_table = "terraform-lock"
   }
 }

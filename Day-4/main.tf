@@ -1,24 +1,29 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 }
 
-resource "aws_instance" "abhishek" {
-  instance_type = "t2.micro"
-  ami = "ami-053b0d53c279acc90" # change this
-  subnet_id = "subnet-019ea91ed9b5252e7" # change this
+resource "aws_instance" "test-ec2" {
+  ami = "ami-0f5fcdfbd140e4ab7"
+  instance_type = "t3.micro"
+  tags = {
+    Name : "demo-ubuntu-ec2"
+  }
 }
 
-resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "abhishek-s3-demo-xyz" # change this
+/*
+resource "aws_s3_bucket" "terraform_remote_backend" {
+  bucket = "sai-tf-remote-backend-bucket"
+  tags = {
+    Name  = "TF-RB-bucket"
+  }
 }
 
 resource "aws_dynamodb_table" "terraform_lock" {
-  name           = "terraform-lock"
-  billing_mode   = "PAY_PER_REQUEST"
-  hash_key       = "LockID"
-
+  name  = "terraform-lock"
+  billing_mode  = "PAY_PER_REQUEST"
+  hash_key  = "LockID"
   attribute {
     name = "LockID"
     type = "S"
   }
-}
+}*/
