@@ -1,11 +1,13 @@
-variable "ami_value" {
-    description = "value for the ami"
+variable "ami_ubuntu"{
+    description = "ami ubuntu value"
+    type = string
+    default = "ami-0f5fcdfbd140e4ab7"
 }
 
-variable "instance_type_value" {
-    description = "value for instance_type"
+variable "instance_type_t3_micro"{
+    description = "free tier instance type value"
 }
 
-variable "subnet_id_value" {
-    description = "value for the subnet_id"
+variable "ec2_name" {
+    description = "ec2 name input value"
 }

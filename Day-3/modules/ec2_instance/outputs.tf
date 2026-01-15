@@ -1,3 +1,7 @@
-output "public-ip-address" {
-  value = aws_instance.example.public_ip
+output "ec2_id" {
+  value = aws_instance.demo.id
+}
+
+output "public_ip_ec2" {
+  value = aws_instance.demo.public_ip
 }

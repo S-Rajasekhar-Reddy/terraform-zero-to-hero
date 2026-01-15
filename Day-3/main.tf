@@ -1,10 +1,9 @@
 provider "aws" {
-  region = "us-east-1"
+    region = "us-east-2"
 }
 
 module "ec2_instance" {
-  source = "./modules/ec2_instance"
-  ami_value = "ami-053b0d53c279acc90" # replace this
-  instance_type_value = "t2.micro"
-  subnet_id_value = "subnet-019ea91ed9b5252e7". # replace this
+    source = "./modules/ec2_instance"
+    instance_type_t3_micro = "t3.micro"
+    ec2_name = "test-ubuntu"
 }
