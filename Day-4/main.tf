@@ -12,7 +12,7 @@ resource "aws_instance" "test-ec2" {
 
 /*
 resource "aws_s3_bucket" "terraform_remote_backend" {
-  bucket = "sai-tf-remote-backend-bucket"
+  bucket = "tf-remote-backend-bucket"
   tags = {
     Name  = "TF-RB-bucket"
   }
